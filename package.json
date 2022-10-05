@@ -1,0 +1,27 @@
+{
+  "name": "zamiros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn  src/server.ts",
+    "build": "tsc",
+    "start": "node dist/src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahav2324/zamiros.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yahav2324/zamiros/issues"
+  },
+  "homepage": "https://github.com/yahav2324/zamiros#readme",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4"
+  }
+}
