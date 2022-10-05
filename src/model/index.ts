@@ -1,19 +1,19 @@
 import {Model, DataTypes} from "sequelize";
 import db from "../config/data/database.config";
 
-interface ITodoExpenses {
+interface IExpenses {
     id: number;
     name: string;
     payments: boolean;
     paymentsCount: number;
 };
 
-export class TodoExpenses extends Model<ITodoExpenses> {};
+export class expensesTable extends Model<IExpenses> {};
 
-TodoExpenses.init(
+expensesTable.init(
     {
     id: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.UUIDV4,
         primaryKey: true,
         allowNull: false,
     },
