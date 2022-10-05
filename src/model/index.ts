@@ -4,6 +4,7 @@ import db from "../config/data/database.config";
 interface IExpenses {
     id: number;
     name: string;
+    price: number;
     payments: boolean;
     paymentsCount: number;
 };
@@ -19,6 +20,10 @@ expensesTable.init(
     },
     name: {
         type: DataTypes.STRING,
+        allowNull: false,
+    },
+    price: {
+        type: DataTypes.NUMBER,
         allowNull: false,
     },
     payments: {
