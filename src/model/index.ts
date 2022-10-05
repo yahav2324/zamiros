@@ -4,13 +4,14 @@ import db from "../config/data/database.config";
 interface ITodoExpenses {
     id: number;
     name: string;
+    price: number;
     payments: boolean;
     paymentsCount: number;
 };
 
-export class TodoExpenses extends Model<ITodoExpenses> {};
+export class expensesTable extends Model<ITodoExpenses> {};
 
-TodoExpenses.init(
+expensesTable.init(
     {
     id: {
         type: DataTypes.NUMBER,
@@ -19,6 +20,10 @@ TodoExpenses.init(
     },
     name: {
         type: DataTypes.STRING,
+        allowNull: false,
+    },
+    price: {
+        type: DataTypes.NUMBER,
         allowNull: false,
     },
     payments: {
